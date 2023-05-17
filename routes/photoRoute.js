@@ -5,6 +5,6 @@ const router = express.Router();
 //zaten /photos ile buraya gönderiyor buradan da post veya get olarak ayrılıyo zaten photostan sonra bişe olmadığından
 router.route("/").post(photoController.createPhoto).get(photoController.getAllPhotos)
 
-
+router.route("/:id").get(photoController.getAPhoto)
 
 export default router;
